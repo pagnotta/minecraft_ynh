@@ -106,7 +106,8 @@ tempdir="$(mktemp -d)"
 
 wget http://ftp.de.debian.org/debian/pool/main/o/openjdk-16/openjdk-16-jdk_16.0.2+7-2_amd64.deb -P $tempdir >/dev/null 2>&1
 
-ynh_exec_warn_less dpkg -i $tempdir/jdk-${java_version}_linux-x64_bin.deb
+#ynh_exec_warn_less dpkg -i $tempdir/jdk-${java_version}_linux-x64_bin.deb
+ynh_exec_warn_less dpkg -i $tempdir/openjdk-16-jdk_16.0.2+7-2_amd64.deb
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
